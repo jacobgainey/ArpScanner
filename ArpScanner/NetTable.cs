@@ -5,7 +5,7 @@ using System.Net;
 
 namespace ArpScanner
 {
-    public static class IpNetTable
+    public class NetTable
     {
         // The max number of physical addresses.
         const int MAXLEN_PHYSADDR = 8;
@@ -55,7 +55,7 @@ namespace ArpScanner
         // The insufficient buffer error.
         const int ERROR_INSUFFICIENT_BUFFER = 122;
 
-        public static void GetArpAddresses()
+        public void GetArpAddresses()
         {
             // The number of bytes needed.
             int bytesNeeded = 0;
