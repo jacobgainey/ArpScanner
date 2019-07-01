@@ -43,11 +43,7 @@ namespace ArpScanner
         // Declare the GetIpNetTable function.
         [DllImport("IpHlpApi.dll")]
         [return: MarshalAs(UnmanagedType.U4)]
-        static extern int GetIpNetTable(
-           IntPtr pIpNetTable,
-           [MarshalAs(UnmanagedType.U4)]
-         ref int pdwSize,
-           bool bOrder);
+        static extern int GetIpNetTable(IntPtr pIpNetTable, [MarshalAs(UnmanagedType.U4)] ref int pdwSize, bool bOrder);
 
         [DllImport("IpHlpApi.dll", SetLastError = true, CharSet = CharSet.Auto)]
         internal static extern int FreeMibTable(IntPtr plpNetTable);
